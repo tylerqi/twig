@@ -69,6 +69,6 @@ func (r *ResponseWrap) Hijack() (net.Conn, *bufio.ReadWriter, error) {
 
 func (r *ResponseWrap) reset(w http.ResponseWriter) {
 	r.Writer = w
-	r.Status = 200
+	r.Status = http.StatusOK
 	r.Committed = false
 }
